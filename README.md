@@ -36,12 +36,9 @@
 ```text
 .
 ├── notebooks/
-│   ├── 01_Data_Exploration.ipynb    # 数据加载与 EDA
-│   ├── 02_Fine_tuning.ipynb         # 模型训练与微调
-│   └── 03_Evaluation_and_UI.ipynb   # 评估、分析与 Gradio 部署
-├── results/                         # 训练日志与模型 Checkpoints
+│   └── bert.ipynb
 ├── images/                          # 混淆矩阵、Loss 曲线等图表
-├── app.py                           # 最终演示的 Web 应用代码
+├── report.md                        # 项目报告
 └── README.md                        # 项目说明
 ```
 
@@ -52,10 +49,6 @@
 
 ## 🏃 如何运行 (Quick Start)
 本项目推荐在 Google Colab 环境下运行，以获取免费的 T4 GPU 支持：
-1. 打开 `notebooks/` 下的对应文件。
+1. 打开 `notebooks/` 下的`bert.ipynb`。
 2. 确保环境已安装依赖：`pip install transformers datasets gradio scikit-learn`。
-3. 依次运行单元格，即可完成训练与推理。
-4. 运行 `app.py` 或最后一段代码块，即可启动 Web 交互界面。
-
----
-*本项目为自然语言处理实训/课程设计成果。*
+3. 依次运行单元格，即可完成训练，推理及评估等。
