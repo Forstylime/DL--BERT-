@@ -37,7 +37,7 @@
 ### 2.2 探索性数据分析 (EDA)
 在将文本输入模型之前，本项目对训练集进行了详尽的探索性数据分析，以指导后续的预处理策略与评估指标选择。分析结果如下图所示：
 
-![distribution](distribution.png)
+![distribution](images/distribution.png)
 > *图 1：IMDB 训练集正负样本分布（左）与文本长度分布直方图（右）*
 
 基于上述图表，得出以下核心结论：
@@ -96,7 +96,7 @@
 
 值得注意的是，从 Epoch 1 到 Epoch 2，测试集损失（Validation Loss）出现了微弱的反弹（从 0.215 上升至 0.235），但模型整体的分类准确率却依然从 91.5% 上升到了 93.0%。这在深度学习中是一个典型现象：说明模型的分类边界变得更加“自信和锋利”，但也暗示着模型即将触及过拟合的边缘。因此，本项目将 Epoch 设为 2 是一个极为精确的“提前早停 (Early Stopping)”工程决策。
 
-![loss curve](loss_cureve.png)
+![loss curve](images/loss_cureve.png)
 
 ## 5. 模型评估与错误分析 (Evaluation & Error Analysis)
 
@@ -105,7 +105,7 @@
 ### 5.1 全局定量评估 (混淆矩阵)
 我们在 25,000 条测试集数据上对模型进行了无监督的全局推理，并绘制了混淆矩阵（Confusion Matrix）。
 
-![confusion matirx](ConfusionMatrix.png)
+![confusion matirx](images/ConfusionMatrix.png)
 > *图 3：测试集评估混淆矩阵*
 
 由混淆矩阵可知，在总计预测错误的 **2104** 条样本中，呈现出了极强的**不对称性**：
@@ -139,7 +139,7 @@
 ### 6.2 系统界面演示
 本项目构建了极简且高效的交互界面，用户仅需输入电影评论，即可即时获取模型的情感倾向反馈。
 [点击这里访问 Demo](https://38126347c0ebf6126e.gradio.live/)
-![image](image.png)
+![image](images/image.png)
 > *图 4：基于 Gradio 的情感分析系统交互界面演示*
 
 如图所示，该系统不仅输出了二分类结果，还展示了模型在该判断上的置信度（Confidence Score）。这种可视化方案不仅降低了用户的使用门槛，也让“模型表现”变得可量化、可验证。
